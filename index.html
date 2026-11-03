@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#F5F0E6">
+<meta name="description" content="Undangan pernikahan Zakiy & Indi — Rabu, 23 Januari 2027, Majalengka.">
+<title>Undangan Pernikahan Zakiy &amp; Indi</title>
+
+<!-- Meta Tag untuk Share WhatsApp -->
+<meta property="og:title" content="Undangan Pernikahan Zakiy & Indi" />
+<meta property="og:description" content="Rabu, 23 Januari 2027 - Majalengka" />
+<meta property="og:image" content="https://undanganzaki.pages.dev/assets/gambar/kenangan/resepsi.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://undanganzaki.pages.dev/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2333402A'/%3E%3Crect x='10' y='20' width='44' height='26' rx='5' fill='%23F2ECDD'/%3E%3Cpath d='M12 23l20 14 20-14' fill='none' stroke='%2397793F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M32 41c-3.1-2.2-5-4-5-6 0-1.5 1.2-2.6 2.6-2.6 1 0 1.9.6 2.4 1.4.5-.8 1.4-1.4 2.4-1.4 1.4 0 2.6 1.1 2.6 2.6 0 2-1.9 3.8-5 6Z' fill='%23A2452E'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<noscript><style>.sampul{display:none}body.terkunci{overflow:auto!important}</style></noscript>
+</head>
+<body class="terkunci">
+
+<!-- ============ SAMPUL PEMBUKA ============ -->
+<div class="sampul" id="sampul">
+  <canvas class="sampul-kelopak" id="kelopak" aria-hidden="true"></canvas>
+  <div class="sampul-kartu">
+    <svg class="sampul-ornamen" viewBox="0 0 320 44" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+        <path pathLength="1" d="M10 24 C 66 9, 116 9, 160 24 C 204 9, 254 9, 310 24"/>
+        <path pathLength="1" d="M58 16 q 11 -9 21 -4 q -10 9 -21 4 Z"/>
+        <path pathLength="1" d="M100 14 q 10 -8 20 -3 q -10 8 -20 3 Z"/>
+        <path pathLength="1" d="M262 16 q -11 -9 -21 -4 q 10 9 21 4 Z"/>
+        <path pathLength="1" d="M220 14 q -10 -8 -20 -3 q 10 8 20 3 Z"/>
+      </g>
+      <circle class="sampul-ornamen-titik" cx="160" cy="24" r="2.4" fill="currentColor"/>
+    </svg>
+    <p class="kicker c-in" style="--d:.25s;margin-top:1rem">Undangan Pernikahan</p>
+    <p class="nama nama--sampul">
+      <span class="c-in" style="--d:.4s">Zakiy</span>
+      <span class="nama-amp c-in" style="--d:.55s">&amp;</span>
+      <span class="c-in" style="--d:.7s">Indi</span>
+    </p>
+    <p class="sampul-tanggal c-in" style="--d:.85s">Rabu, 23 Januari 2027</p>
+    <div class="ornamen-garis c-in" style="--d:.95s" aria-hidden="true"><i></i><b></b><i></i></div>
+    <div class="sampul-kepada c-in" style="--d:1.05s">
+      <p class="sampul-kepada-label">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+      <p class="sampul-kepada-nama" id="namaTamu">Tamu Undangan</p>
+    </div>
+    <button type="button" class="btn btn-solid sampul-buka c-in" style="--d:1.2s" id="btnBuka">Buka Undangan</button>
+    <p class="sampul-catatan c-in" style="--d:1.3s">Mohon maaf apabila terdapat kesalahan penulisan nama &amp; gelar.</p>
+  </div>
+</div>
+
+<!-- Kumpulan ikon garis yang dipakai berulang di halaman -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21c-4.4-3.6-6.6-6.9-6.6-10A6.6 6.6 0 0 1 12 4.4 6.6 6.6 0 0 1 18.6 11c0 3.1-2.2 6.4-6.6 10Z"/><circle cx="12" cy="11" r="2.4"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m14.8 9.2-1.6 4-4 1.6 1.6-4z"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4.5 3.5 6.3v13.2L9 17.7l6 1.8 5.5-1.8V4.5L15 6.3 9 4.5Z"/><path d="M9 4.5v13.2M15 6.3v13.2"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="15" rx="2"/><path d="M4 10.5h16M8.5 3.5v4M15.5 3.5v4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.6a8.4 8.4 0 0 1-12.3 7.4L4 20l1-4.3A8.4 8.4 0 1 1 21 11.6Z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M4.5 12h14M13 6.5l5.5 5.5-5.5 5.5"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 4v11M8 11.5l4 4 4-4M5.5 19.5h13"/></symbol>
+  <symbol id="i-surat" viewBox="0 0 24 24">
+    <path d="M12 5.9C10.7 4.9 10 4.2 10 3.4c0-.7.5-1.2 1.2-1.2.3 0 .6.2.8.4.2-.2.5-.4.8-.4.7 0 1.2.5 1.2 1.2 0 .8-.7 1.5-2 2.5Z" fill="currentColor" stroke="none"/>
+    <rect x="3" y="7" width="18" height="12.5" rx="2.5"/>
+    <path d="m4 9.5 8 5.2 8-5.2"/>
+  </symbol>
+
+  <!-- Rumbai bunga untuk latar terang -->
+  <symbol id="ornamen-bunga" viewBox="0 0 80 80">
+    <path d="M6 74 C 20 58 34 40 44 18" fill="none" stroke="#7C8B66" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M6 74 C 26 66 46 56 64 40" fill="none" stroke="#7C8B66" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M20 56 C 28 52 34 44 36 34 C 26 38 21 46 20 56 Z" fill="#7C8B66" opacity=".8"/>
+    <g fill="#DBA8A0">
+      <ellipse cx="44" cy="10.5" rx="4" ry="6.5"/>
+      <ellipse cx="44" cy="10.5" rx="4" ry="6.5" transform="rotate(72 44 18)"/>
+      <ellipse cx="44" cy="10.5" rx="4" ry="6.5" transform="rotate(144 44 18)"/>
+      <ellipse cx="44" cy="10.5" rx="4" ry="6.5" transform="rotate(216 44 18)"/>
+      <ellipse cx="44" cy="10.5" rx="4" ry="6.5" transform="rotate(288 44 18)"/>
+    </g>
+    <circle cx="44" cy="18" r="3" fill="#97793F"/>
+    <circle cx="64" cy="40" r="3.4" fill="#DBA8A0"/>
+    <circle cx="69" cy="34.5" r="2" fill="#DBA8A0" opacity=".85"/>
+  </symbol>
+
+  <!-- Rumbai bunga garis untuk latar gelap -->
+  <symbol id="ornamen-bunga-garis" viewBox="0 0 80 80">
+    <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+      <path d="M6 74 C 20 58 34 40 44 18"/>
+      <path d="M6 74 C 26 66 46 56 64 40"/>
+      <ellipse cx="44" cy="10.5" rx="4" ry="6.5"/>
+      <ellipse cx="44" cy="10.5" rx="4" ry="6.5" transform="rotate(72 44 18)"/>
+      <ellipse cx="44" cy="10.5" rx="4" ry="6.5" transform="rotate(144 44 18)"/>
+      <ellipse cx="44" cy="10.5" rx="4" ry="6.5" transform="rotate(216 44 18)"/>
+      <ellipse cx="44" cy="10.5" rx="4" ry="6.5" transform="rotate(288 44 18)"/>
+    </g>
+    <circle cx="44" cy="18" r="2.4" fill="currentColor"/>
+    <circle cx="64" cy="40" r="3" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<!-- ============ HERO PEMBUKA ============ -->
+<header class="hero">
+  <!-- Ornamen ranting, digambar dengan animasi garis saat halaman dibuka -->
+  <svg class="branch branch--kiri" viewBox="0 0 120 240" aria-hidden="true">
+    <path class="stem" pathLength="1" d="M60 236 C 57 180 63 110 60 10"/>
+    <path class="leaf" fill-opacity=".95" d="M60 200 C 82 194 98 178 100 156 C 78 160 64 178 60 200 Z"/>
+    <path class="leaf" fill-opacity=".8"  d="M60 172 C 40 166 27 151 26 131 C 46 136 58 152 60 172 Z"/>
+    <path class="leaf" fill-opacity=".9"  d="M60 142 C 77 136 88 123 89 106 C 72 111 62 125 60 142 Z"/>
+    <path class="leaf" fill-opacity=".75" d="M60 114 C 46 108 38 97 38 83 C 52 88 60 100 60 114 Z"/>
+    <path class="leaf" fill-opacity=".85" d="M60 88 C 71 83 78 74 78 63 C 67 67 61 76 60 88 Z"/>
+    <path class="leaf" fill-opacity=".9"  d="M60 40 C 54 30 54 18 60 8 C 66 18 66 30 60 40 Z"/>
+    <g class="bunga-ranting">
+      <g fill="#DBA8A0">
+        <ellipse cx="60" cy="6" rx="2.6" ry="4.4"/>
+        <ellipse cx="60" cy="6" rx="2.6" ry="4.4" transform="rotate(72 60 10.5)"/>
+        <ellipse cx="60" cy="6" rx="2.6" ry="4.4" transform="rotate(144 60 10.5)"/>
+        <ellipse cx="60" cy="6" rx="2.6" ry="4.4" transform="rotate(216 60 10.5)"/>
+        <ellipse cx="60" cy="6" rx="2.6" ry="4.4" transform="rotate(288 60 10.5)"/>
+      </g>
+      <circle cx="60" cy="10.5" r="1.9" fill="#97793F"/>
+    </g>
+  </svg>
+  <svg class="branch branch--kanan" viewBox="0 0 120 240" aria-hidden="true">
+    <path class="stem" pathLength="1" d="M60 236 C 57 180 63 110 60 10"/>
+    <path class="leaf" fill-opacity=".95" d="M60 200 C 82 194 98 178 100 156 C 78 160 64 178 60 200 Z"/>
+    <path class="leaf" fill-opacity=".8"  d="M60 172 C 40 166 27 151 26 131 C 46 136 58 152 60 172 Z"/>
+    <path class="leaf" fill-opacity=".9"  d="M60 142 C 77 136 88 123 89 106 C 72 111 62 125 60 142 Z"/>
+    <path class="leaf" fill-opacity=".75" d="M60 114 C 46 108 38 97 38 83 C 52 88 60 100 60 114 Z"/>
+    <path class="leaf" fill-opacity=".85" d="M60 88 C 71 83 78 74 78 63 C 67 67 61 76 60 88 Z"/>
+    <path class="leaf" fill-opacity=".9"  d="M60 40 C 54 30 54 18 60 8 C 66 18 66 30 60 40 Z"/>
+    <g class="bunga-ranting">
+      <g fill="#DBA8A0">
+        <ellipse cx="60" cy="6" rx="2.6" ry="4.4"/>
+        <ellipse cx="60" cy="6" rx="2.6" ry="4.4" transform="rotate(72 60 10.5)"/>
+        <ellipse cx="60" cy="6" rx="2.6" ry="4.4" transform="rotate(144 60 10.5)"/>
+        <ellipse cx="60" cy="6" rx="2.6" ry="4.4" transform="rotate(216 60 10.5)"/>
+        <ellipse cx="60" cy="6" rx="2.6" ry="4.4" transform="rotate(288 60 10.5)"/>
+      </g>
+      <circle cx="60" cy="10.5" r="1.9" fill="#97793F"/>
+    </g>
+  </svg>
+
+  <div class="hero-isi">
+    <p class="kicker">Undangan Pernikahan</p>
+    <div class="bingkai">
+      <div class="bingkai-dalam">
+        <span class="bingkai-mono" aria-hidden="true">Z <i>&amp;</i> I</span>
+        <img src="assets/gambar/kenangan/resepsi.png" alt="Foto Zakiy &amp; Indi" decoding="async" onerror="this.remove()">
+      </div>
+    </div>
+    <h1 class="nama">
+      <span>Zakiy</span>
+      <span class="nama-amp">&amp;</span>
+      <span>Indi</span>
+    </h1>
+    <div class="hero-tanggal">
+      <span class="garis-pendek" aria-hidden="true"></span>
+      <p>Rabu, 23 Januari 2027</p>
+      <span class="garis-pendek" aria-hidden="true"></span>
+    </div>
+    <button type="button" class="cue" id="cue" aria-label="Gulir ke bawah">
+      <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ============ KATA PENGANTAR DAN KUTIPAN ============ -->
+<section class="section band" id="undangan">
+  <div class="wadah">
+    <p class="kicker" style="text-align:center" data-reveal>Kata Pengantar</p>
+    <p class="pengantar" data-reveal style="--d:.08s">
+      Dengan memohon rahmat dan ridha Tuhan Yang Maha Esa, kami bermaksud
+      menyelenggarakan pernikahan putra-putri kami. Merupakan suatu kehormatan
+      apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.
+    </p>
+
+    <div class="divider" data-reveal style="--d:.12s" aria-hidden="true">
+      <span class="garis garis--kiri"></span>
+      <svg class="leafmark" viewBox="0 0 48 16" fill="currentColor"><path d="M24 1.5c-5.2 2.8-5.2 10.2 0 13 5.2-2.8 5.2-10.2 0-13Z"/><circle cx="10" cy="8" r="1.3"/><circle cx="38" cy="8" r="1.3"/></svg>
+      <span class="garis garis--kanan"></span>
+    </div>
+
+    <blockquote data-reveal style="--d:.16s">
+      <p>&ldquo;Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan
+      pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan
+      merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih
+      dan sayang.&rdquo;</p>
+      <cite>QS. Ar-Rum : 21</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ MEMPELAI ============ -->
+<section class="section section--rumbai" id="mempelai">
+  <svg class="rumbai rumbai--ta" viewBox="0 0 80 80" aria-hidden="true"><use href="#ornamen-bunga"/></svg>
+  <svg class="rumbai rumbai--br" viewBox="0 0 80 80" aria-hidden="true"><use href="#ornamen-bunga"/></svg>
+  <div class="wadah">
+    <header class="sec-head" data-reveal>
+      <p class="kicker">Mempelai</p>
+      <h2>Dua Insan dalam Satu Ikatan</h2>
+    </header>
+
+    <div class="mempelai-grid">
+      <article class="mempelai" data-reveal>
+        <div class="foto">
+          <span class="huruf" aria-hidden="true">Z</span>
+          <img src="assets/gambar/pengantin/gambar1.png" alt="Foto mempelai pria" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <h3>Muhammad Zakiy Rahmawan</h3>
+        <p class="ortu">Putra pertama dari<br>Ibu Mania Hani</p>
+      </article>
+
+      <div class="amp" data-reveal style="--d:.12s" aria-hidden="true">&amp;</div>
+
+      <article class="mempelai" data-reveal style="--d:.2s">
+        <div class="foto">
+          <span class="huruf" aria-hidden="true">I</span>
+          <img src="assets/gambar/pengantin/gambar2.png" alt="Foto mempelai wanita" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <h3>Indi</h3>
+        <p class="ortu">Putri kedua dari<br>Bapak Wahyu Putranto &amp; Ibu Dewi Kartika</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RANGKAIAN ACARA DAN LOKASI ============ -->
+<section class="section band" id="acara">
+  <div class="wadah wadah--sempit">
+    <header class="sec-head" data-reveal>
+      <p class="kicker">Rangkaian Acara</p>
+      <h2>Akad &amp; Resepsi</h2>
+    </header>
+
+    <div class="tanggal-besar" data-reveal style="--d:.08s">
+      <span class="tb-sisi"><b>Rabu</b></span>
+      <span class="tb-angka">23</span>
+      <span class="tb-sisi"><b>Januari 2027</b></span>
+    </div>
+
+    <div class="acara-grid">
+      <div class="acara-item" data-reveal style="--d:.14s">
+        <svg class="ic acara-ikon" aria-hidden="true"><use href="#i-clock"/></svg>
+        <h3>Akad Nikah</h3>
+        <p class="acara-jam"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> 08.00 &ndash; 10.00 WIB</p>
+        <p class="acara-ket">Dihadiri keluarga dan kerabat terdekat.</p>
+      </div>
+      <div class="acara-pembatas" data-reveal style="--d:.2s" aria-hidden="true"><b></b></div>
+      <div class="acara-item" data-reveal style="--d:.26s">
+        <svg class="ic acara-ikon" aria-hidden="true"><use href="#i-clock"/></svg>
+        <h3>Resepsi</h3>
+        <p class="acara-jam"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> 11.00 &ndash; 14.00 WIB</p>
+        <p class="acara-ket">Dilanjutkan ramah tamah bersama seluruh tamu undangan.</p>
+      </div>
+    </div>
+
+    <div class="lokasi" data-reveal>
+      <p class="lokasi-label">Kedua acara dilaksanakan di</p>
+      <p class="lokasi-nama">Kediaman Keluarga Mempelai</p>
+      <p class="lokasi-alamat">
+        Jl. Raya Talaga - Cikijing, Maja Sel., Kec. Maja,<br>
+        Kabupaten Majalengka, Jawa Barat 45461
+      </p>
+
+      <div class="peta-bingkai" data-reveal style="--d:.08s">
+        <iframe id="peta" title="Peta lokasi acara" loading="lazy"></iframe>
+      </div>
+
+        <div style="max-width:420px; margin:1.6rem auto 0.5rem;">
+          <input class="kontrol" id="inNamaUnduh" type="text" placeholder="Ketik nama Anda untuk unduhan" style="text-align:center;">
+        </div>
+        <div class="lokasi-aksi">
+          <a class="btn btn-solid" id="btnMaps" target="_blank" rel="noopener" href="#">
+            <svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>
+            Buka Lokasi
+          </a>
+          <button type="button" class="btn btn-solid" id="btnSalinAlamat">
+            <svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg>
+            Salin Alamat
+          </button>
+          <button type="button" class="btn btn-solid" id="btnUnduh">
+            <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>
+            Unduh Undangan
+          </button>
+        </div>
+      <p class="lokasi-ket" id="ketMaps"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERI FOTO ============ -->
+<section class="section" id="galeri">
+  <div class="wadah">
+    <header class="sec-head" data-reveal>
+      <p class="kicker">Galeri</p>
+      <h2>Sepotong Cerita Kami</h2>
+    </header>
+    <div class="kolase">
+      <figure class="jepret jepret--a" data-reveal style="--d:.05s">
+        <div class="jepret-bingkai">
+          <img src="assets/gambar/kenangan/gambar3.png" alt="Kali pertama bertemu" loading="lazy" onerror="this.closest('.jepret').style.display='none'">
+        </div>
+        <figcaption>Kali pertama bertemu</figcaption>
+      </figure>
+      <figure class="jepret jepret--b" data-reveal style="--d:.18s">
+        <div class="jepret-bingkai">
+          <img src="assets/gambar/kenangan/gambar4.png" alt="Momen bersama" loading="lazy" onerror="this.closest('.jepret').style.display='none'">
+        </div>
+        <figcaption>Momen bersama</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PENGHITUNG HARI ============ -->
+<section class="hitung section--rumbai" id="hitung">
+  <svg class="rumbai rumbai--ta rumbai--garis" viewBox="0 0 80 80" aria-hidden="true"><use href="#ornamen-bunga-garis"/></svg>
+  <svg class="rumbai rumbai--tr rumbai--garis" viewBox="0 0 80 80" aria-hidden="true"><use href="#ornamen-bunga-garis"/></svg>
+  <div class="wadah">
+    <p class="kicker kicker--terang" data-reveal>Menanti Hari Bahagia</p>
+    <h2 data-reveal style="--d:.08s">Menuju Rabu, 23 Januari 2027</h2>
+
+    <div class="cd" id="cdWrap" data-reveal style="--d:.14s" role="timer" aria-label="Waktu menuju hari pernikahan">
+      <div class="cd-item"><span id="cdHari">00</span><small>Hari</small></div>
+      <span class="cd-sep" aria-hidden="true"></span>
+      <div class="cd-item"><span id="cdJam">00</span><small>Jam</small></div>
+      <span class="cd-sep" aria-hidden="true"></span>
+      <div class="cd-item"><span id="cdMenit">00</span><small>Menit</small></div>
+      <span class="cd-sep" aria-hidden="true"></span>
+      <div class="cd-item"><span id="cdDetik">00</span><small>Detik</small></div>
+    </div>
+    <p class="cd-selesai" id="cdSelesai" hidden>Hari bahagia telah tiba. Terima kasih atas doa restu Anda.</p>
+
+    <button type="button" class="btn btn-terang" id="btnSimpan" data-reveal style="--d:.2s">
+      <svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>
+      Simpan Tanggal
+    </button>
+    <p class="hitung-note" data-reveal style="--d:.26s">Acara dimulai pukul 08.00 WIB &middot; berpakaian sopan dan rapi.</p>
+  </div>
+</section>
+
+<!-- ============ AMPLOP DIGITAL ============ -->
+<section class="section section--rumbai" id="tanda-kasih">
+  <svg class="rumbai rumbai--tr" viewBox="0 0 80 80" aria-hidden="true"><use href="#ornamen-bunga"/></svg>
+  <div class="wadah">
+    <header class="sec-head" data-reveal>
+      <p class="kicker">Amplop Digital</p>
+      <h2>Tanda Kasih</h2>
+    </header>
+    <p class="kasih-teks" data-reveal style="--d:.08s">
+      Doa restu Anda adalah hadiah terindah bagi kami. Namun apabila memberi
+      merupakan ungkapan kasih, kami menerimanya dengan penuh terima kasih.
+    </p>
+
+    <div class="rekening" data-reveal style="--d:.14s">
+      <div class="rek-baris">
+        <div class="rek-info">
+          <span class="rek-bank">BCA</span>
+          <span class="rek-no">1234 5678 90</span>
+          <span class="rek-nama">a.n. Muhammad Zakiy Rahmawan</span>
+        </div>
+        <button type="button" class="rek-salin" data-rek="1234567890" aria-label="Salin nomor rekening BCA">
+          <svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg>
+        </button>
+      </div>
+      <hr>
+      <div class="rek-baris">
+        <div class="rek-info">
+          <span class="rek-bank">Mandiri</span>
+          <span class="rek-no">0987 6543 21</span>
+          <span class="rek-nama">a.n. Indi</span>
+        </div>
+        <button type="button" class="rek-salin" data-rek="0987654321" aria-label="Salin nomor rekening Mandiri">
+          <svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONFIRMASI KEHADIRAN ============ -->
+<section class="section band" id="rsvp">
+  <div class="wadah">
+    <header class="sec-head" data-reveal>
+      <p class="kicker">KEHADIRAN</p>
+      <h2>Konfirmasi Kehadiran</h2>
+    </header>
+    <p class="rsvp-teks" data-reveal style="--d:.08s">
+      Mohon berkenan mengisi formulir berikut agar kami dapat
+      mempersiapkan acara dengan baik.
+    </p>
+
+    <form id="formRsvp" novalidate data-reveal style="--d:.14s">
+      <div class="field">
+        <label for="inNama">Nama Lengkap</label>
+        <input class="kontrol" id="inNama" type="text" autocomplete="name" placeholder="Tulis nama Anda">
+      </div>
+
+      <fieldset class="field">
+        <legend>Konfirmasi Kehadiran</legend>
+        <div class="pilihan">
+          <label class="radio">
+            <input type="radio" name="hadir" value="hadir" checked>
+            <span class="radio-kartu">
+              <svg class="ic radio-cek" aria-hidden="true"><use href="#i-check"/></svg>
+              Hadir
+            </span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="hadir" value="berhalangan">
+            <span class="radio-kartu">
+              <svg class="ic radio-cek" aria-hidden="true"><use href="#i-check"/></svg>
+              Berhalangan
+            </span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="field" id="wrapJumlah">
+        <label for="inJumlah">Jumlah Orang</label>
+        <select class="kontrol" id="inJumlah">
+          <option value="1">1 orang</option>
+          <option value="2">2 orang</option>
+          <option value="3">3 orang</option>
+          <option value="4">4 orang</option>
+          <option value="5">5 orang</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="inUcapan">Ucapan &amp; Doa</label>
+        <textarea class="kontrol kontrol--teks" id="inUcapan" rows="4" placeholder="Tulis ucapan dan doa (opsional)"></textarea>
+      </div>
+
+      <p class="form-galat" id="galatRsvp" hidden>Mohon tuliskan nama Anda terlebih dahulu.</p>
+
+      <button type="submit" class="btn btn-solid">
+        <svg class="ic" aria-hidden="true"><use href="#i-surat"/></svg>
+        Kirim Konfirmasi
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ PENUTUP ============ -->
+<section class="section section--rumbai penutup" id="penutup">
+  <svg class="rumbai rumbai--bl" viewBox="0 0 80 80" aria-hidden="true"><use href="#ornamen-bunga"/></svg>
+  <svg class="rumbai rumbai--br" viewBox="0 0 80 80" aria-hidden="true"><use href="#ornamen-bunga"/></svg>
+  <div class="wadah">
+    <div class="divider" data-reveal aria-hidden="true">
+      <span class="garis garis--kiri"></span>
+      <svg class="leafmark" viewBox="0 0 48 16" fill="currentColor"><path d="M24 1.5c-5.2 2.8-5.2 10.2 0 13 5.2-2.8 5.2-10.2 0-13Z"/><circle cx="10" cy="8" r="1.3"/><circle cx="38" cy="8" r="1.3"/></svg>
+      <span class="garis garis--kanan"></span>
+    </div>
+    <p data-reveal style="--d:.08s">
+      Besar harapan kami kehadiran Bapak/Ibu/Saudara/i untuk memberikan doa
+      restu kepada kedua mempelai. Atas kehadiran dan doanya, kami ucapkan
+      terima kasih.
+    </p>
+    <p class="ttd" data-reveal style="--d:.14s">Zakiy &amp; Indi</p>
+    <p class="keluarga" data-reveal style="--d:.2s">Beserta Keluarga Besar Kedua Mempelai</p>
+  </div>
+</section>
+
+<footer class="kaki">
+  <p>Rabu, 23 Januari 2027 &middot; Kediaman Keluarga Mempelai, Majalengka</p>
+  <a class="kaki-kredit"
+     href="https://wa.me/6285171202190?text=Halo%2C%20saya%20tertarik%20dengan%20undangan%20digital%20ini."
+     target="_blank" rel="noopener">
+    <svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>
+    Website ini dibuat oleh&nbsp;<strong>DF</strong>
+  </a>
+</footer>
+
+<!-- ============ DIALOG PILIHAN KALENDER ============ -->
+<div class="modal" id="modalKalender" hidden>
+  <div class="modal-veil" data-tutup></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="judulKalender">
+    <button type="button" class="modal-close" data-tutup aria-label="Tutup dialog kalender">
+      <svg class="ic" aria-hidden="true"><use href="#i-x"/></svg>
+    </button>
+    <p class="kicker" id="judulKalender">Simpan Tanggal</p>
+    <p class="modal-venue">Rabu, 23 Januari 2027</p>
+    <p class="modal-alamat">Akad Nikah pukul 08.00 WIB &middot; Resepsi pukul 11.00 &ndash; 14.00 WIB</p>
+
+    <div class="modal-aksi">
+      <!-- Google Calendar: mencatat acara ke kalender Google milik tamu -->
+      <a class="btn btn-solid" target="_blank" rel="noopener"
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Pernikahan%20Zakiy%20%26%20Indi&amp;dates=20270123T010000Z/20270123T070000Z&amp;details=Akad%20Nikah%20pukul%2008.00%20WIB%20dan%20Resepsi%20pukul%2011.00-14.00%20WIB.&amp;location=Jl.%20Raya%20Talaga%20-%20Cikijing%2C%20Maja%20Sel.%2C%20Kec.%20Maja%2C%20Kabupaten%20Majalengka%2C%20Jawa%20Barat%2045461">
+        <svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>
+        Tambah ke Google Calendar
+      </a>
+      <!-- Apple Calendar: berkas kalender ditanamkan agar aplikasi Kalender terbuka langsung di iPhone -->
+      <a class="btn btn-solid"
+         href="data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//Undangan%20Pernikahan//Zakiy%20Indi//ID%0ABEGIN:VEVENT%0AUID:pernikahan-zakiy-indi@undangan%0ADTSTAMP:20250101T000000Z%0ADTSTART:20270123T010000Z%0ADTEND:20270123T070000Z%0ASUMMARY:Pernikahan%20Zakiy%20&amp;%20Indi%0ALOCATION:Jl.%20Raya%20Talaga%20-%20Cikijing%2C%20Maja%20Sel.%2C%20Kec.%20Maja%2C%20Kabupaten%20Majalengka%2C%20Jawa%20Barat%2045461%0ADESCRIPTION:Akad%20Nikah%20pukul%2008.00%20WIB%20dan%20Resepsi%20pukul%2011.00-14.00%20WIB.%0AEND:VEVENT%0AEND:VCALENDAR">
+        <svg class="ic" aria-hidden="true"><use href="#i-map"/></svg>
+        Tambah ke Kalender Apple
+      </a>
+    </div>
+
+    <p class="modal-alamat" style="margin-top:1rem">Google Calendar untuk Android dan Kalender Apple untuk iPhone.</p>
+  </div>
+</div>
+
+<!-- ============ DIALOG PILIHAN UNDUHAN ============ -->
+<div class="modal" id="modalUnduhan" hidden>
+  <div class="modal-veil" data-tutup></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="judulUnduhan">
+    <button type="button" class="modal-close" data-tutup aria-label="Tutup dialog unduhan">
+      <svg class="ic" aria-hidden="true"><use href="#i-x"/></svg>
+    </button>
+    <p class="kicker" id="judulUnduhan">Pilih Format</p>
+    <p class="modal-venue">Undang Undangan</p>
+    <p class="modal-alamat">Silakan pilih format file yang ingin diunduh.</p>
+    <div class="modal-aksi">
+      <button type="button" class="btn btn-solid" id="btnUnduhPDF">
+        <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>
+        Unduh PDF
+      </button>
+      <button type="button" class="btn btn-solid" id="btnUnduhPNG">
+        <svg class="ic" aria-hidden="true"><use href="#i-dl"/></svg>
+        Unduh Gambar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast pemberitahuan singkat -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>
+  <span id="toastPesan"></span>
+</div>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
